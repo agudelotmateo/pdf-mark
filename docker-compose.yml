@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - FLASK_APP=application.py
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<hmtl>
+
+    <head>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8" />
+        <meta content="initial-scale=1, width=device-width" name="viewport" />
+
+        <!-- Add favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <!-- Bootstrap -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <!-- Title font -->
+        <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
+
+        <!-- App's own CSS -->
+        <link href="/static/styles.css" rel="stylesheet" />
+
+        <!-- Title -->
+        <title>PDFMark</title>
+    </head>
+
+    <body>
+        <!-- Background image is made entirely using CSS -->
+        <div class="background-image"></div>
+        <!-- The actual content of the page, not blurred -->
+        <div class="content">
+            <!-- Page title -->
+            <h1 class="text-center">PDFMark</h1>
+            <!-- Container with the form -->
+            <div class="container panel panel-default top-buffer col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 box-shadow--large">
+                <!-- Container's title -->
+                <h3 class="panel-heading text-center">Remove text watermarks from PDFs!</h3>
+                <!-- Container's form -->
+                <div class="panel-body">
+                    <form role="form" action="/remove" method="post" enctype="multipart/form-data">
+                        <!-- Row with the input fields -->
+                        <div class="row top-buffer">
+                            <!-- Upload file button -->
+                            <div class="form-group col-xs-6">
+                                <label class="btn btn-default btn-block box-shadow--small">
+                                    <span class="glyphicon glyphicon-file"></span> Browse <input type="file" name="data_file" hidden>
+                                </label>
+                            </div>
+                            <!-- Watermark text field -->
+                            <div class="form-group col-xs-6">
+                                <input autocomplete="off" class="form-control box-shadow--small" name="watermark" placeholder="Watermark text" type="text">
+                            </div>
+                        </div>
+                        <!-- Submit button -->
+                        <div class="form-group top-buffer col-xs-8 col-xs-offset-2">
+                            <button type="submit" class="btn btn-info btn-block box-shadow--small">
+                                <span class="glyphicon glyphicon-send"></span> GO!
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer bottom-buffer">
+                    <form action="https://github.com/agudelotmateo/pdf-mark">
+                        <div class="center-button">
+                            <button type="submit" class="btn--no-border">
+                                View code on GitHub
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

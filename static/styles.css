@@ -1,0 +1,83 @@
+/* Special styling for the page's title */
+
+h1 {
+  font-family: 'Knewave', cursive;
+  font-size: 165px;
+  line-height: 160px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+}
+
+/* Required in Bootstrap 3.3 to make the upload file button */
+[hidden] {
+  display: none !important;
+}
+
+/* Small shadow for box elements */
+.box-shadow--small {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+
+/* Large shadow for box elements */
+.box-shadow--large {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+/* Blank space on top of this element */
+.top-buffer {
+  margin-top: 20px;
+}
+
+/* Blank space below this element */
+.bottom-buffer {
+  margin-bottom: 20px;
+}
+
+/* Blurred fixed background */
+.content:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/* The actual non-blurred content of the page */
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Removes the border from the button, making it a nice text link */
+.btn--no-border {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.center-button {
+  text-align: center;
+}
